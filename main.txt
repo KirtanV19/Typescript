@@ -1,0 +1,7 @@
+Other global names to avoid in the browser/DOM context:
+
+name, event, length, status, location, window, document
+
+/* Data types */
+// primitive:- can copy 
+// reference:- Can not copy | (),[],{}
