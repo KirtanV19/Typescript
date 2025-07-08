@@ -5,3 +5,21 @@ name, event, length, status, location, window, document
 /* Data types */
 // primitive:- can copy 
 // reference:- Can not copy | (),[],{}
+
+let a = [1,2,3]
+let b = a
+
+is available in typescript
+
+but if declare 'a' as Readonly then direct mutation is not possible.
+
+instead of that, we need,
+
+let a: ReadonlyArray<number> = [1, 2, 3, 4, 5];
+let b: Array<number> = [...a];
+
+// It is works same in 'const' also
+
+Type Inference:-  TypeScript figures out the type automatically.
+Type Annotation:- You explicitly declare the type.
+

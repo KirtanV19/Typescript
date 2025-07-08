@@ -1,4 +1,4 @@
-// Arrays
+// Arrays & Tuples
 
 // standard type
 let aray: number[] = [1, 2, 3, 4];
@@ -29,6 +29,10 @@ console.log("arrays1: ", arrays1);
 let roles: readonly number[] = [1, 2, 3, 4];
 console.log("roles: ", roles);
 
+// Readonly using genric
+let roles1: ReadonlyArray<string | number> = [1, 2, 3, 4, 5, "six"];
+console.log("roles1: ", roles1);
+
 // Multiple datatype
 let point: [number | string, number] = [1, 2];
 console.log("point: ", point);
@@ -55,3 +59,10 @@ const filterValues = values1.filter(
   (v): v is number => typeof v === "number" && v % 2 === 0
 );
 console.log("filterValues: ", filterValues);
+
+// mutation in readonly array
+
+let a: ReadonlyArray<number> = [1, 2, 3, 4, 5];
+let b: Array<number> = [...a];
+
+// It is works same in 'const' also
