@@ -42,3 +42,16 @@ const printArrays = <T>(arg: Array<T>): Array<T> => {
 
 const aa = printArrays([1, 2, 3]);
 console.log("a", aa);
+
+// 3. Generics with interface
+
+interface Human {
+  name: string;
+  age: number;
+}
+
+const getHumanData = <T extends Human>(obj: T): void => {
+  console.log(`Name: ${obj.name}, Age: ${obj.age}`);
+};
+
+getHumanData({ name: "Alice", age: 25 });
